@@ -2,7 +2,9 @@
 <project version="4">
   <component name="VcsDirectoryMappings">
     <mapping directory="" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/de-revision stuff/data-engineering-essentials" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/de-revisionstuff/data-engineering-essentials" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/de-revisionstuff/de_coures/databricks-demo/data" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/de-revisionstuff/de_coures/section_20/data" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/projects/SQL/data engineering data from udemy/data" vcs="Git" />
   </component>
 </project>
