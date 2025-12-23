@@ -2,7 +2,7 @@ from turtle import Turtle
 
 FONT = ("Courier", 24, "normal")
 ALIGNMENT= "left"
-
+#hihi
 class Scoreboard(Turtle):
     def __init__(self,xx,yy,color,text):
         super().__init__()
