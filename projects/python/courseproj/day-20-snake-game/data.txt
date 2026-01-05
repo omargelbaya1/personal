@@ -1,0 +1,4 @@
+0
+Highest score is 6
+Highest score is 2
+Highest score is 1
