@@ -21,17 +21,22 @@
 # {new_key:new_value for (index, row) in df.iterrows()}
 import pandas
 
-#TODO 1. Create a dictionary in this format:
-# {"A": "Alfa", "B": "Bravo"}
-
 nato_df=pandas.read_csv("nato_phonetic_alphabet.csv")
 new_dict={row.letter:row.code for (index, row) in nato_df.iterrows()}
-print(nato_df)
-print(new_dict)
 
-#TODO 2. Create a list of the phonetic code words from a word that the user inputs.
 
-name = input("Enter a name").upper()
 
-another_list=[new_dict[letter] for letter in name ]
-print(another_list)
+
+
+
+def trying_stuff():
+    name = input("Enter a name").upper()
+    try:
+        another_list=[new_dict[letter] for letter in name ]
+    except KeyError:
+        print("Please type in something useful bro")
+        trying_stuff()
+    else:
+        print(another_list)
+
+trying_stuff()
