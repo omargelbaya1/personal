@@ -10,7 +10,7 @@ BACKGROUND_COLOR = "#B1DDC6"
 try:
     df = pd.read_csv('data/words_to_learn.csv')
 except FileNotFoundError:
-    df = pd.read_csv('data/french_words.csv')
+    df = pd.read_csv('data/arabic_to_english.csv')
 else:
     to_learn=df.to_dict(orient="records")
 finally:
@@ -23,11 +23,11 @@ def next_card():
     global timer
     global random_card
     window.after_cancel(timer)
-    timer=window.after(3000,other_card)
+    timer=window.after(10000,other_card)
     random_card= random.choice(to_learn)
-    french = random_card["French"]
-    canvas.itemconfig(canvas_word_text, text=f"{french}",fill="black")
-    canvas.itemconfig(canvas_title_text,text="French",fill="black")
+    arabic = random_card["Arabic"]
+    canvas.itemconfig(canvas_word_text, text=f"{arabic}",fill="black")
+    canvas.itemconfig(canvas_title_text,text="Arabic",fill="black")
     canvas.itemconfig(canvas_image, image=card_front)
 
 
@@ -56,9 +56,9 @@ def words_to_learn():
 
 #window
 window =Tk()
-window.title("Flash Cards, LEARN FRENCH WITH ME!")
+window.title("Arabic Helper!")
 window.config(padx=50,pady=50 ,bg=BACKGROUND_COLOR)
-timer=window.after(3000,other_card)
+timer=window.after(10000,other_card)
 #canvas
 canvas = Canvas(width=800,height=526)
 card_front=PhotoImage(file="images/card_front.png")
