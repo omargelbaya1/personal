@@ -1,23 +1,23 @@
+import requests
 import datetime as dt
-import random
-import smtplib
 
-MY_EMAIL = ""
-MY_PASSWORD = ""
+# response=requests.get(url="http://api.open-notify.org/iss-now.json")
+# response.raise_for_status()
+# data=response.json()["iss_position"]
+# print(data)
 
-now = dt.datetime.now()
-weekday = now.weekday()
-if weekday == 6:
-    with open("quotes.txt") as quote_file:
-        all_quotes = quote_file.readlines()
-        quote = random.choice(all_quotes)
 
-    print(quote)
-    with smtplib.SMTP("smtp.gmail.com") as connection:
-        connection.starttls()
-        connection.login(MY_EMAIL, MY_PASSWORD)
-        connection.sendmail(
-            from_addr=MY_EMAIL,
-            to_addrs=MY_EMAIL,
-            msg=f"Subject:Monday Motivation\n\n{quote}"
-        )
+parameters={
+    "lng":2,
+    "lat":2,
+    "formatted":0
+}
+response=requests.get( "https://api.sunrise-sunset.org/json",params=parameters)
+data=response.json()
+
+sunrise=data["results"]["sunrise"].split("T")[1].split(":")[0]
+sunset=data["results"]["sunset"].split("T")[1].split(":")[0]
+
+current_time_hour= dt.datetime.now().hour
+
+print(sunrise,sunset,current_time_hour)
