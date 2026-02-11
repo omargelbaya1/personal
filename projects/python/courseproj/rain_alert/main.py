@@ -21,7 +21,7 @@ print(account_sid)
 
 LAT = 52.636879
 LONG=-1.139759
-API_KEY="ce531bf833190f4cd0b79dc82942d7a3"
+API_KEY="placeholder"
 ENDPOINT="https://api.openweathermap.org/data/2.5/forecast?"
 
 parameters={
