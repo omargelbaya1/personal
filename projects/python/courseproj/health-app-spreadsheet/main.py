@@ -14,9 +14,7 @@ APP_ID=os.environ["APP_ID"]
 API_KEY=os.environ["API_KEY"]
 TOKEN=os.environ["TOKEN"]
 
-# APP_ID="app_17e2207c3b4e488f8d18080c"
-# API_KEY="nix_live_QY5tlaFc8FkUFsJV2AzoVKAcS0a75UfC"
-# TOKEN="aGFiYXNoaWJhOnIzazk1N2I4"
+
 headers={
 "x-app-id": APP_ID,
 "x-app-key": API_KEY
@@ -67,7 +65,7 @@ parameters_sheety={
 }
 
 headers={
-    # "Authorization":"Basic aGFiYXNoaWJhOnIzazk1N2I4"
+
 "Authorization":f"Basic {TOKEN}"
 }
 
