@@ -1,10 +1,5 @@
 #CURRENTLY, RUN THIS CODE THROUGH THE TERMINAL E.G. PYTHON3 MAIN.PY, the play button isnt working right now!
 
-
-
-
-
-
 import requests
 import datetime as dt
 import os
