@@ -22,6 +22,12 @@ print(song_names)
 
 
 
+
+
+
+
+
+
 scope = "user-library-read"
 
 sp = spotipy.Spotify(auth_manager=SpotifyOAuth(scope=scope))
