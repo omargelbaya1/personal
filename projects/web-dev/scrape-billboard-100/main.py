@@ -18,6 +18,8 @@ song_names = [song.getText().strip() for song in song_names_spans]
 
 
 print(song_names)
+print(song_names)
+
 
 
 
