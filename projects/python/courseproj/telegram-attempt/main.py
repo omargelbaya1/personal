@@ -1,5 +1,6 @@
 #BELOW IS A WORKING METHOD TO SEND SMS, you can automate the stocks stuff from below:
 import requests
+
 http_api="8335945594:AAG2lzi7U4Lplql4PazKQF028Ati92I-40w"
 bot_username="@testomarge"
 # url=f"https://api.telegram.org/bot{http_api}/getUpdates"
