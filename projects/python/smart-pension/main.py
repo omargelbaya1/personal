@@ -3,6 +3,7 @@ import pandas as py
 
 
 url = ""
+url2 = ""
 
 response = requests.get(url)
 
