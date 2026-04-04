@@ -18,8 +18,8 @@ response = requests.get(url,params=params)
 
 data = response.json()
 
-for i in data:
-    print(i["daily"])
+# for i in data:
+#     print(i["daily"])
 
 
 
