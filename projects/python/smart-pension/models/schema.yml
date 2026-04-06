@@ -1,0 +1,18 @@
+version: 2
+
+models:
+  - name: stg_weather
+    description: "Staging model for raw weather data"
+    columns:
+      - name: city
+        description: "Name of the city"
+      - name: date
+        description: "Date of the weather reading"
+      - name: temp_max_c
+        description: "Maximum temperature in Celsius"
+      - name: temp_min_c
+        description: "Minimum temperature in Celsius"
+      - name: precipitation_mm
+        description: "Precipitation in millimetres"
+      - name: ingested_at
+        description: "Timestamp of when the record was loaded"

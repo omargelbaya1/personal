@@ -6,6 +6,8 @@ import psycopg2
 from dotenv import load_dotenv
 import os
 
+
+
 from requests import HTTPError
 from sqlalchemy import create_engine
 
