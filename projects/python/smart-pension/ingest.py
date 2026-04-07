@@ -10,6 +10,7 @@ from sqlalchemy import create_engine
 #Loading in environment variables
 load_dotenv()
 
+
 #Parameters for database connection
 host="localhost"
 database=os.getenv("DATABASE")
