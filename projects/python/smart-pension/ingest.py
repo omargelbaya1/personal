@@ -21,7 +21,6 @@ user=os.getenv("DATABASE_USER")
 password=os.getenv("DATABASE_PASSWORD")
 port=os.getenv("DATABASE_PORT")
 
-
 #testing database Connection
 try:
     conn = psycopg2.connect(
