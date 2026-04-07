@@ -1,13 +1,9 @@
 from sys import exception
-
 import requests
 import pandas as pd
 import psycopg2
 from dotenv import load_dotenv
 import os
-
-
-
 from requests import HTTPError
 from sqlalchemy import create_engine
 
@@ -20,6 +16,8 @@ database=os.getenv("DATABASE")
 user=os.getenv("DATABASE_USER")
 password=os.getenv("DATABASE_PASSWORD")
 port=os.getenv("DATABASE_PORT")
+
+
 
 #testing database Connection
 try:
@@ -99,8 +97,7 @@ print(df.to_string)
 
 
 
-#inserting df into postgre table
-#Unsure if it needs to append to replace here
+#inserting dataframe into postgre table
 #Using index=False to stop the dataframe index being inserted as a column
 engine = create_engine(f'postgresql://{user}:{password}@{host}:{port}/{database}')
 
