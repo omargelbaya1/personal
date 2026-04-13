@@ -15,6 +15,8 @@ load_dotenv()
 
 
 
+
+
 #Parameters for database connection
 host="localhost"
 database=os.getenv("DATABASE")
