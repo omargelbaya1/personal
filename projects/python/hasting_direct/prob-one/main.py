@@ -21,6 +21,7 @@ import pandas as pd
 
 
 
+
 def problem():
     df = pd.read_csv("/Users/omargelbaya/Documents/personal/projects/python/hasting_direct/prob-one/data.csv")
     df.columns = df.columns.str.strip()
