@@ -2,40 +2,51 @@ version: 2
 
 models:
   - name: stg_weather
-    description: "Cleaned and deduplicated staging model for raw weather data"
+    description: "Staging table to clean data and check for any date and city combinations"
     columns:
       - name: city
-        description: "Name of the city"
         tests:
           - not_null
+          - accepted_values:
+              values: ['London', 'Manchester', 'Edinburgh', 'Bristol']
       - name: date
-        description: "Date of the weather reading"
         tests:
           - not_null
       - name: temp_max_c
-        description: "Maximum temperature in Celsius"
+        tests:
+          - not_null
+      
       - name: temp_min_c
-        description: "Minimum temperature in Celsius"
+        tests:
+          - not_null
       - name: precipitation_mm
-        description: "Precipitation in millimetres"
+        tests:
+          - not_null
       - name: ingested_at
-        description: "Timestamp of when the record was loaded"
+        tests:
+          - not_null
 
   - name: fct_weather_summary
-    description: "One row per city summarising weather across all dates"
+    description: "Table to aggregate weather data based on city"
     columns:
       - name: city
-        description: "Name of the city"
         tests:
           - not_null
           - unique
+          - accepted_values:
+              values: ['London', 'Manchester', 'Edinburgh', 'Bristol']
       - name: avg_temp_max_c
-        description: "Average daily high temperature"
+        tests:
+          - not_null
       - name: avg_temp_min_c
-        description: "Average daily low temperature"
+        tests:
+          - not_null
       - name: total_precipitation_mm
-        description: "Total precipitation across all dates"
+        tests:
+          - not_null
       - name: rainy_days
-        description: "Count of days where precipitation exceeded 1mm"
+        tests:
+          - not_null
       - name: hottest_day
-        description: "Date with the highest max temperature"
+        tests:
+          - not_null

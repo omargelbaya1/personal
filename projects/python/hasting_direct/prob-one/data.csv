@@ -1,0 +1,8 @@
+quote_id, customer_age, vehicle_age, base_premium, risk_score, region
+Q001, 23, 3, 450.00, 0.72, North
+Q002, 45, , 620.00, 0.45, South
+Q003, 31, 7, 310.00, , Midlands
+Q004, 19, 2, 890.00, 0.91, North
+Q005, 67, 12, 275.00, 0.31, South
+Q006, 29, 5, 520.00, 0.68,
+Q007, , 4, 410.00, 0.55, Midlands
