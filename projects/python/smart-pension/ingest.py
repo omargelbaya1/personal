@@ -1,4 +1,5 @@
 from sys import exception
+
 import requests
 import pandas as pd
 import psycopg2
@@ -17,7 +18,7 @@ load_dotenv()
 
 
 
-#Parameters for database connection
+#Parameters for database connections
 host="localhost"
 database=os.getenv("DATABASE")
 user=os.getenv("DATABASE_USER")
@@ -42,8 +43,7 @@ except psycopg2.OperationalError as e:
 
 
 
-
-#Parameeters for the weather ingestion
+#Parameters for the weather ingestion
 url = "https://api.open-meteo.com/v1/forecast"
 params = {
 	"latitude": [51.51, 53.48, 55.95, 51.45],
@@ -60,7 +60,6 @@ try:
     if response.status_code ==200:
         print(f"Successful retrieval of data. Response Code: {response.status_code}")
         data = response.json()
-        print(data)
 except HTTPError as e:
     print(f"Unsuccessful retrieval of data {e}")
 
@@ -72,7 +71,7 @@ except HTTPError as e:
 cities = [ 'London','Manchester','Edinburgh','Bristol']
 for i, entry in enumerate(data):
     entry['daily']["city"] = cities[i]
-    print(entry['daily'])
+
 
 
 

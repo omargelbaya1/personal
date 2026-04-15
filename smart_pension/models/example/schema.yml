@@ -1,0 +1,41 @@
+version: 2
+
+models:
+  - name: stg_weather
+    description: "Cleaned and deduplicated staging model for raw weather data"
+    columns:
+      - name: city
+        description: "Name of the city"
+        tests:
+          - not_null
+      - name: date
+        description: "Date of the weather reading"
+        tests:
+          - not_null
+      - name: temp_max_c
+        description: "Maximum temperature in Celsius"
+      - name: temp_min_c
+        description: "Minimum temperature in Celsius"
+      - name: precipitation_mm
+        description: "Precipitation in millimetres"
+      - name: ingested_at
+        description: "Timestamp of when the record was loaded"
+
+  - name: fct_weather_summary
+    description: "One row per city summarising weather across all dates"
+    columns:
+      - name: city
+        description: "Name of the city"
+        tests:
+          - not_null
+          - unique
+      - name: avg_temp_max_c
+        description: "Average daily high temperature"
+      - name: avg_temp_min_c
+        description: "Average daily low temperature"
+      - name: total_precipitation_mm
+        description: "Total precipitation across all dates"
+      - name: rainy_days
+        description: "Count of days where precipitation exceeded 1mm"
+      - name: hottest_day
+        description: "Date with the highest max temperature"
