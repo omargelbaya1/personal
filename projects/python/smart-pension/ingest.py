@@ -12,11 +12,6 @@ load_dotenv()
 
 
 
-
-
-
-
-
 #Parameters for database connection
 host="localhost"
 database=os.getenv("DATABASE")
@@ -63,6 +58,8 @@ try:
         print(data)
 except HTTPError as e:
     print(f"Unsuccessful retrieval of data {e}")
+    raise exception ("")
+
 
 
 
@@ -109,7 +106,7 @@ print(df.to_string)
 engine = create_engine(f'postgresql://{user}:{password}@{host}:{port}/{database}')
 
 try:
-    df.to_sql('raw_weather',engine ,if_exists='append',index=False)
+    df.to_sql('raw_weather',engine ,if_exists='replace',index=False)
     print("Successfully inserted data into database")
 except ValueError as e:
     print(f"Database insert failed {e}")

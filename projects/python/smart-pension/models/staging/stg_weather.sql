@@ -4,6 +4,10 @@ with source as (
 
 ),
 
+latest_dayas (
+    row_number() on city
+)
+
 stg as (
 
     select distinct on (city,date)
