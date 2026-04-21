@@ -76,4 +76,6 @@ def reverse_mapping(d:Dict[str,list[str]]) -> Dict[str,list[str]]:
     
     print(new_dict)
 
+    
+
 reverse_mapping(country2colours)        
