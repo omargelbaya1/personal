@@ -1,0 +1,52 @@
+version: 2
+
+models:
+  - name: stg_weather
+    description: "Staging table to clean data and check for any date and city combinations"
+    columns:
+      - name: city
+        tests:
+          - not_null
+          - accepted_values:
+              values: ['London', 'Manchester', 'Edinburgh', 'Bristol']
+      - name: date
+        tests:
+          - not_null
+      - name: temp_max_c
+        tests:
+          - not_null
+      
+      - name: temp_min_c
+        tests:
+          - not_null
+      - name: precipitation_mm
+        tests:
+          - not_null
+      - name: ingested_at
+        tests:
+          - not_null
+
+  - name: fct_weather_summary
+    description: "Table to aggregate weather data based on city"
+    columns:
+      - name: city
+        tests:
+          - not_null
+          - unique
+          - accepted_values:
+              values: ['London', 'Manchester', 'Edinburgh', 'Bristol']
+      - name: avg_temp_max_c
+        tests:
+          - not_null
+      - name: avg_temp_min_c
+        tests:
+          - not_null
+      - name: total_precipitation_mm
+        tests:
+          - not_null
+      - name: rainy_days
+        tests:
+          - not_null
+      - name: hottest_day
+        tests:
+          - not_null
