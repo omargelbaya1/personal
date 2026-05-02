@@ -1,0 +1,8 @@
+# models/sources.yml
+version: 2
+
+sources:
+  - name: public          # logical name you choose
+    schema: public        # actual schema in your DB
+    tables:
+      - name: raw_weather # actual table name
