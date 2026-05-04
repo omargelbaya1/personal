@@ -25,21 +25,21 @@
 #     return my_dict
 
 
-# def get_items_which_occur_in_both_lists(l1:list[str],l2:list[str]) -> set[str]:
+def get_items_which_occur_in_both_lists(l1:list[str],l2:list[str]) -> set[str]:
         
-#         # set_l1=set(l1)
-#         # set_l2=set(l2)
+        # set_l1=set(l1)
+        # set_l2=set(l2)
 
-#         list_of_chars=[]
+        list_of_chars=[]
 
-#         for i in l1:
-#             for j in l2:
-#                   if i==j:   
-#                     list_of_chars.append(i)
+        for i in l1:
+            for j in l2:
+                  if i==j:   
+                    list_of_chars.append(i)
         
-#         set(list_of_chars)
-#         print(list_of_chars)            
-#         return list_of_chars
+        set(list_of_chars)
+        print(list_of_chars)            
+        return list_of_chars
 
                   
 
