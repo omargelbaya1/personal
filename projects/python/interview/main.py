@@ -33,6 +33,7 @@ def get_items_which_occur_in_both_lists(l1:list[str],l2:list[str]) -> set[str]:
         list_of_chars=[]
 
         for i in l1:
+            
             for j in l2:
                   if i==j:   
                     list_of_chars.append(i)
@@ -41,6 +42,10 @@ def get_items_which_occur_in_both_lists(l1:list[str],l2:list[str]) -> set[str]:
         print(list_of_chars)            
         return list_of_chars
 
+                  
+                  
+                  
+                  
                   
 
 
