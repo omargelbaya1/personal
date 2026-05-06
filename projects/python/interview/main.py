@@ -25,6 +25,10 @@
 #     return my_dict
 
 
+
+
+
+
 def get_items_which_occur_in_both_lists(l1:list[str],l2:list[str]) -> set[str]:
         
         # set_l1=set(l1)
