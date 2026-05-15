@@ -45,6 +45,9 @@ def get_items_which_occur_in_both_lists(l1:list[str],l2:list[str]) -> set[str]:
         set(list_of_chars)
         print(list_of_chars)            
         return list_of_chars
+    
+    
+    
 
                   
                   
